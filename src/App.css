@@ -1,38 +1,180 @@
-.App {
-  text-align: center;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+}
+
+.editable-cell {
+  display: flex;
   align-items: center;
+}
+
+.table-container {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table-container th, .table-container td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-container th {
+  background-color: #333;
+  color: #fff;
+}
+
+.table-container tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+.table-container .selected-row {
+  background-color: #e0e0e0;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 70%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.search-bar button {
+  padding: 15px;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #555;
+  border: 1px solid #555;
+}
+
+.pagination {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.pagination button {
+  padding: 15px;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0px 2px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.pagination button:hover {
+  background-color: #555;
+  border: 1px solid #555;
+}
+
+.delete-selected {
+  margin-top: 20px;
+}
+
+.delete-selected button {
+  padding: 15px;
+  background-color: #e44d26;
+  color: #fff;
+  border: 1px solid #e44d26;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-selected button:hover {
+  background-color: #ff5a3d;
+  border: 1px solid #ff5a3d;
+}
+
+.edit, .delete, .save, .cancel, .search-icon {
+  font-size: 18px;
+  color: #555;
+  margin-right: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.edit:hover, .delete:hover, .save:hover, .cancel:hover, .search-icon:hover {
+  color: #e44d26; /* Change color on hover */
+}
+.buttonFinal {
+  margin: 20px auto;
+  padding: 35px 37px;
+  width: 70px;
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.buttonFinal:active,
+.buttonFinal:hover {
+  outline: 0;
+}
+
+.buttonFinal span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.buttonFinal:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .buttonFinal {
+    font-size: 24px;
+    min-width: 196px;
   }
 }
